@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestKeychainPaja" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMn-u8-R6R">
+                                <rect key="frame" x="25" y="68" width="70" height="30"/>
+                                <state key="normal" title="Save Pass"/>
+                                <connections>
+                                    <action selector="savePass:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R1t-9I-37z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgX-Zk-xei">
+                                <rect key="frame" x="25" y="106" width="93" height="30"/>
+                                <state key="normal" title="Retreive Pass"/>
+                                <connections>
+                                    <action selector="retreivePass:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xcj-Hf-PVw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXz-ol-lQW">
+                                <rect key="frame" x="25" y="144" width="81" height="30"/>
+                                <state key="normal" title="Delete Pass"/>
+                                <connections>
+                                    <action selector="deletePass:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v6k-cA-3dk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2q-AY-C3x">
+                                <rect key="frame" x="25" y="182" width="87" height="30"/>
+                                <state key="normal" title="Update Pass"/>
+                                <connections>
+                                    <action selector="updatePass:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aGX-ln-h52"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter pass" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eau-uX-PVz">
+                                <rect key="frame" x="25" y="220" width="334" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pass is:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEY-Wm-5ta">
+                                <rect key="frame" x="25" y="258" width="58" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rp8-DF-57u">
+                                <rect key="frame" x="25" y="287" width="10.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rp8-DF-57u" firstAttribute="leading" secondItem="Eau-uX-PVz" secondAttribute="leading" id="4K8-4F-O7B"/>
+                            <constraint firstItem="FMn-u8-R6R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="9jA-Mv-kev"/>
+                            <constraint firstItem="Eau-uX-PVz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="BYG-2V-MdB"/>
+                            <constraint firstItem="YXz-ol-lQW" firstAttribute="leading" secondItem="L2q-AY-C3x" secondAttribute="leading" id="FVU-cu-Wky"/>
+                            <constraint firstItem="lgX-Zk-xei" firstAttribute="leading" secondItem="YXz-ol-lQW" secondAttribute="leading" id="Fmn-y7-kKm"/>
+                            <constraint firstItem="FMn-u8-R6R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="XZs-Vi-ugX"/>
+                            <constraint firstItem="YXz-ol-lQW" firstAttribute="top" secondItem="lgX-Zk-xei" secondAttribute="bottom" constant="8" symbolic="YES" id="XoJ-cL-u7h"/>
+                            <constraint firstItem="rp8-DF-57u" firstAttribute="top" secondItem="zEY-Wm-5ta" secondAttribute="bottom" constant="8" id="XtM-dQ-9BI"/>
+                            <constraint firstItem="zEY-Wm-5ta" firstAttribute="top" secondItem="Eau-uX-PVz" secondAttribute="bottom" constant="8" id="b3z-DK-4fm"/>
+                            <constraint firstItem="zEY-Wm-5ta" firstAttribute="leading" secondItem="Eau-uX-PVz" secondAttribute="leading" id="hhI-Ud-5P0"/>
+                            <constraint firstItem="L2q-AY-C3x" firstAttribute="top" secondItem="YXz-ol-lQW" secondAttribute="bottom" constant="8" symbolic="YES" id="ipg-Gw-LCe"/>
+                            <constraint firstItem="lgX-Zk-xei" firstAttribute="top" secondItem="FMn-u8-R6R" secondAttribute="bottom" constant="8" symbolic="YES" id="qJa-Zk-uKA"/>
+                            <constraint firstItem="FMn-u8-R6R" firstAttribute="leading" secondItem="lgX-Zk-xei" secondAttribute="leading" id="vIa-X4-SMn"/>
+                            <constraint firstItem="Eau-uX-PVz" firstAttribute="top" secondItem="L2q-AY-C3x" secondAttribute="bottom" constant="8" symbolic="YES" id="vvm-GS-kM7"/>
+                            <constraint firstItem="L2q-AY-C3x" firstAttribute="leading" secondItem="Eau-uX-PVz" secondAttribute="leading" id="ynN-bz-xVw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="enterPassTxtFld" destination="Eau-uX-PVz" id="FRL-lQ-nJT"/>
+                        <outlet property="showPassTxtFld" destination="rp8-DF-57u" id="EDf-nU-E6t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
